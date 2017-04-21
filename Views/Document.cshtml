@@ -1,0 +1,32 @@
+﻿@using Orchard.UI.Resources
+@{
+    string title = Convert.ToString(Model.Title);
+    string siteName = Convert.ToString(WorkContext.CurrentSite.SiteName);
+
+    //RegisterLink(new LinkEntry { Type = "image/x-icon", Rel = "shortcut icon", Href = Url.Content("~/modules/orchard.themes/Content/orchard.ico") });
+    SetMeta(new MetaEntry { Name = "viewport", Content = "width=device-width, initial-scale=1.0" });
+    SetMeta(httpEquiv: "X-UA-Compatible", content: "IE=edge,chrome=1");
+
+    Style.Require("Bootstrap.Style");
+    Script.Require("Bootstrap.Script").AtFoot();
+}
+
+<!DOCTYPE html>
+<html lang="@WorkContext.CurrentCulture" class="static @Html.ClassForPage()">
+    <head>
+        <meta charset="utf-8" />
+        <title>@Html.Title(title, siteName)</title>
+        @Display(Model.Head)
+        <script>
+            ; (function (d) {
+                d.className = "dyn" + d.className.substring(6, d.className.length);
+            })(document.documentElement);
+        </script>
+    </head>
+    
+    <body>
+        @Display(Model.Body)
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+        @Display(Model.Tail)
+    </body>
+</html>

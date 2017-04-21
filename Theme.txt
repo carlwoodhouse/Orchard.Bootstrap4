@@ -1,0 +1,7 @@
+Name: Orchard.Bootstrap4
+Author: Carl Woodhouse
+Website: https://carlwoodhouse.com
+Description: Orchard theme using bootstrap4
+Version: 0.1
+Tags: bootstrap
+Zones: Header, Navigation, Featured, BeforeMain, AsideFirst, Messages, BeforeContent, Content, AfterContent, AsideSecond, AfterMain, TripelFirst, TripelSecond, TripelThird, FooterQuadFirst, FooterQuadSecond, FooterQuadThird, FooterQuadFourth, Footer

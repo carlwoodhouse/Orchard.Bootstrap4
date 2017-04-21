@@ -1,0 +1,6 @@
+[
+    {
+        "inputs": [ "Assets/scss/bootstrap.scss" ],
+        "output": "Styles/bs.css"
+    }
+]
