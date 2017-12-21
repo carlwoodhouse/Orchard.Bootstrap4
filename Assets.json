@@ -1,6 +1,7 @@
 [
-    {
-        "inputs": [ "Assets/scss/bootstrap.scss" ],
-        "output": "Styles/bs.css"
-    }
+  {
+    "inputs": [ "Assets/scss/bootstrap.scss" ],
+    "output": "Styles/bs.css",
+    "watch": [ "Assets/scss/**/*.scss" ]
+  }
 ]
